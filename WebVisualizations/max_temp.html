@@ -5,78 +5,104 @@
     <meta charset = "UTF-8">
     <title>Max Temp</title>
   <!-- Bring in bootstrap, bootswatch and other stylesheets -->
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <meta charset = "UTF-8">
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary no-pad">
-  <a class="navbar-brand offset-1 alert-secondary bigger-block" href="index.html" ><h2>Latitude</h2></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="nav nav-pills offset-7">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Plots</a>
-            <div class="dropdown-menu">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><h2>Latitude vs Weather</h2></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="nav nav-pills offset-7">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</menu></a>
+          <div class="dropdown-menu">
             <a class="dropdown-item" href="max_temp.html">vs. Max Temp</a>
-            <a class="dropdown-item" href="humid.html">vs. Humidity</a>
-            <a class="dropdown-item" href="cloud.html">vs. Cloudiness</a>
-            <a class="dropdown-item" href="wind.html">vs. Wind Speed</a>
-            </div>
+            <a class="dropdown-item" href="humid.html">vs Humidity</a>
+            <a class="dropdown-item" href="cloud.html">vs Cloudiness</a>
+            <a class = "dropdown-item" href="wind.html">vs. Wind Speed</a>
+          </div>
         </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="compare.html">Comparison <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <li class="nav-item">
+          <a class="nav-link" href="compare.html">Compare Plots</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Regressions</menu></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="sth_reg.html">Southern Hemisphere</a>
+            <a class="dropdown-item" href="nrth_reg.html">Northern Hemisphere</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Data</a>
+        </li>  
+      </ul>
+    </div>
+  </nav>
 
 <div class = "container">
     <div class = "row mt-5">
         <div class = "col-7">
             <div class="jumbotron">
-                <h1>Max temperature</h1>
+                <h1>Max Temperature</h1>
                 <hr class = "my-4">
                 <p class="lead">
-                <img src="assets/images/Fig1.png" alt="Max Temp" style="width:100%;height:95%;padding:10px;display:block;">
+                <img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:95%;padding:10px;display:block;">
                 </p>
                 <br>
-                <p class ="lead">As expected, the weather becomes signficantly
-                warmer as one approaches the equator (0 deg. latitude). Due to the tilt of the earth's axis at this time of year, the Southern Hemisphere temperatures are warmer than Northern
-                Hemisphere temperatures.
+                <p class ="lead">The plot above Max Temperature (C) vs. Latitude is a scatter plot showing the position of each city by maximum temperature on the y axis and latitude, south to north, on the x-axis.  
+                <br>  
+                <br>
+                It is apparent that cooler max temps are recorded for cities closest to the south (-) and north (+) poles, while those cities closer to the equator (0 latitude) are warmer. 
+                <br>
+                <br>
+                We may therefore predict that a statistically significant relationship exists between the latitude of cities and their maximum temperatures.
                 </p>
             </div>
         </div>
         <div class= "col-5">
             <div class="jumbotron">
-                <h2>Visualizations</h2>
+                <h2>Visualisations</h2>
                 <hr class = "my-4">
                     <div class = "row">
                         <div class = "col-6">
-                        <a href="max_temp.html"><img src="assets/images/Fig1.png" alt="Max Temp" style="width:100%;height:90%;display:block;" class="active-link"></a>
+                        <a href="max_temp.html"><img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:90%;display:block;" class="active-link"></a>
                         </div>
                         <div class = "col-6">
-                        <a href="humid.html"><img src="assets/images/Fig2.png" alt="Humidity" style="width:100%;height:90%;display:block;"></a>
+                        <a href="humid.html"><img src="assets/Fig2.png" alt="Humidity" style="width:100%;height:90%;display:block;"></a>
                         </div>                       
-                    </div>
+                      </div>
+                    <br>
+                    <br>
                     <div class = "row">
                         <div class = "col-6">
-                        <a href="cloud.html"><img src="assets/images/Fig3.png" alt="Cloudiness" style="width:100%;height:90%;display:block;"></a>
+                        <a href="cloud.html"><img src="assets/Fig3.png" alt="Cloudiness" style="width:100%;height:90%;display:block;"></a>
                         </div>
                         <div class = "col-6">
-                        <a href="wind.html"><img src="assets/images/Fig4.png" alt="Wind Speed" style="width:100%;height:90%;display:block;"></a>
-                        </div>  
-                    </div>                                                    
+                        <a href="wind.html"><img src="assets/Fig4.png" alt="Wind Speed" style="width:100%;height:90%;display:block;"></a>
+                        </div> 
+                      </div>
+        <div class= "col-7">
+            <div class="">
+              <br>
+              <br>
+                <h2>Regressions</h2>
+                <hr class = "my-4">
+                    <div class = "row">
+                         <div class = "col-18">
+                         <a href="sth_reg.html"><img src="assets/s_temp.png" alt="Max Temp" style="width:100%;height:90%;display:block;" class="active-link"></a>
+                         </div>
+                         <div class = "col-18">
+                         <a href="nrth_reg.html"><img src="assets/n_temp.png" alt="Humidity" style="width:100%;height:90%;display:block;"></a>
+                        </div>                       
+                     </div>
+                 </div>                                                    
             </div>
         </div>
     </div>
