@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset = "UTF-8">
+    <title>Max Temp</title>
+  <!-- Bring in bootstrap, bootswatch and other stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
+  <meta charset = "UTF-8">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><h2>Latitude vs. </h2></a>
+    <ul class="nav nav-tabs">
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="max_temp.html">Latitude vs. Max Temp</a>
+      <a class="dropdown-item" href="humid.html">Latitude vs. Humidity</a>
+      <a class="dropdown-item" href="cloud.html">Latitude vs. Cloudiness</a>
+      <a class="dropdown-item" href="wind.html">Latitude vs. Wind Speed</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="compare.html">Compare Plots</a>
+    </div>
+  </li>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Regressions</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="hot_reg.html">Max Temp Regressions</a>
+    <a class="dropdown-item" href="humid_reg.html">Humidity Regressions</a>
+    <a class="dropdown-item" href="cloud_reg.html">Cloudiness Regressions</a>
+    <a class="dropdown-item" href="wind_reg.html">Wind Speed Regressions</a>
+  </div>
+</li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="data.html">Data</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade show active" id="data">
+
+<div class = "container">
+  <div class = "row mt-5">
+      <div class = "col-7">
+          <div class="jumbotron">
+            <h1>Max Temp</h1>
+              <hr class = "my-4">
+              <p class="lead">
+              <img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:95%;padding:10px;display:block;">
+              </p>
+              <br>
+              <p class ="lead">The plot above Max Temperature (C) vs. Latitude is a scatter plot showing the position of each city by maximum temperature on the y axis and latitude, south to north, on the x-axis.  
+              <br>  
+              <br>
+              It is apparent that cooler max temps are recorded for cities closest to the south (-) and north (+) poles, while those cities closer to the equator (0 latitude) are warmer. 
+              <br>
+              <br>
+              It was therefore predicted that a statistically significant relationship would be found between the latitude of cities and their maximum temperatures.
+              <br>
+              <br>
+              To see the max temp regression anlaysis for each hemipshere click the thermometer.
+              <a href="hot_reg.html" target="_blank">
+                <img src="assets/Hot.png" alt ="Hot" style="width:10%;height:15%;padding:0%;display:inline-block;"> 
+                </a>
+              </p>
+            </div>
+      </div>
+      <div class= "col-5">
+          <div class="jumbotron">
+              <h4>Visualisations</h4>
+              <hr class = "my-4">
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="max_temp.html"><img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:75%;display:block;" class="active-link"></a>
+                      <p> Max Temp</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="humid.html"><img src="assets/Fig2.png" alt="Humidity" style="width:100%;height:75%;display:block;"></a>
+                      <p>Humidity</p>
+                    </div>                       
+                    </div>
+                  <br>
+                  <br>
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="cloud.html"><img src="assets/Fig3.png" alt="Cloudiness" style="width:100%;height:75%;display:block;"></a>
+                      <p>Cloudiness</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="wind.html"><img src="assets/Fig4.png" alt="Wind Speed" style="width:100%;height:75%;display:block;"></a>
+                      <p>Wind Speed</p>
+                    </div> 
+                    <br>
+                    <br>
+                  </div>
+                </div>
+                <div class="jumbotron">
+                  <h4>Regressions</h4>
+                    <hr class = "my-4">
+                    <div class = "col-18">
+                    <a href="hot_reg.html" target="_blank">
+                          <img src="assets/Hot.png" alt ="Hot" style="width:10%;height:15%;padding:0%;display:inline;"> 
+                        <p>Max Temp Regressions</p>  
+                      </a>
+                        </div>
+                        <div class = "col-18">
+                        <a href="humid_reg.html"><img src="assets/humid_drop.png" alt="Humid%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Humidity Regressions</p>
+                        </a>
+                        </div>  
+                        <div class = "col-18">
+                          <a href="cloud_reg.html"><img src="assets/cloudy.png" alt = "Cloud%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Cloudiness Regressions</p>
+                          </a>
+                        </div>
+                        <div class = "col-18">
+                          <a href="wind_reg.html"><img src="assets/windy.png" alt = "Wind Speed"style = "width:10%;height:15%;padding:0%;display:inline;">
+                          <p> Wind Speed Regressions</p>
+                          </a>
+                        </div>
+                        </div>                     
+                   </div>
+               </div>                                                    
+          </div>
+      </div>
+  </div>
+</div>
+    </div>
+    <div class="tab-pane fade" id="dropdown1">
+    </div>
+    <div class="tab-pane fade" id="dropdown2">
+    </div>
+  </div>
+      </ul>
+    </div>
+  </nav>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
