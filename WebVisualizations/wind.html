@@ -5,80 +5,128 @@
     <meta charset = "UTF-8">
     <title>Wind Speed</title>
   <!-- Bring in bootstrap, bootswatch and other stylesheets -->
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <meta charset = "UTF-8">
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary no-pad">
-  <a class="navbar-brand offset-1 alert-secondary bigger-block" href="index.html" ><h2>Latitude</h2></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="nav nav-pills offset-7">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Plots</a>
-            <div class="dropdown-menu">
-            <a class="dropdown-item" href="max_temp.html">vs. Max Temp</a>
-            <a class="dropdown-item" href="humid.html">vs. Humidity</a>
-            <a class="dropdown-item" href="cloud.html">vs. Cloudiness</a>
-            <a class="dropdown-item" href="wind.html">vs. Wind Speed</a>
-            </div>
-        </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="compare.html">Comparison <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class = "container">
-    <div class = "row mt-5">
-        <div class = "col-7">
-            <div class="jumbotron">
-                <h1>Wind Speed</h1>
-                <hr class = "my-4">
-                <p class="lead">
-                <img src="assets/images/Fig4.png" alt="Max Temp" style="width:100%;height:95%;padding:10px;display:block;">
-                </p>
-                <br>
-                <p class ="lead">Next to no relationship between Latitude and Wind Speed although higher winds were observed at higher Northern Latitudes.
-                </p>
-            </div>
-        </div>
-        <div class= "col-5">
-            <div class="jumbotron">
-                <h2>Visualizations</h2>
-                <hr class = "my-4">
-                    <div class = "row">
-                        <div class = "col-6">
-                        <a href="max_temp.html"><img src="assets/images/Fig1.png" alt="Max Temp" style="width:100%;height:90%;display:block;" class="active-link"></a>
-                        </div>
-                        <div class = "col-6">
-                        <a href="humid.html"><img src="assets/images/Fig2.png" alt="Humidity" style="width:100%;height:90%;display:block;"></a>
-                        </div>                       
-                    </div>
-                    <div class = "row">
-                        <div class = "col-6">
-                        <a href="cloud.html"><img src="assets/images/Fig3.png" alt="Cloudiness" style="width:100%;height:90%;display:block;"></a>
-                        </div>
-                        <div class = "col-6">
-                        <a href="wind.html"><img src="assets/images/Fig4.png" alt="Wind Speed" style="width:100%;height:90%;display:block;"></a>
-                        </div>  
-                    </div>                                                    
-            </div>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><h2>Latitude vs Weather</h2></a>
+    <ul class="nav nav-tabs">
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="max_temp.html">Latitude vs. Max Temp</a>
+      <a class="dropdown-item" href="humid.html">Latitude vs. Humidity</a>
+      <a class="dropdown-item" href="cloud.html">Latitude vs. Cloudiness</a>
+      <a class="dropdown-item" href="wind.html">Latitude vs. Wind Speed</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="compare.html">Compare plots</a>
     </div>
+  </li>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Regressions</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="sth_reg.html">Sth Latitude vs. Weather Regressions</a>
+    <a class="dropdown-item" href="nrth_reg.html">Nrth Latitude vs. Weather Regressions</a>
+  </div>
+</li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="data.html">Data</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade show active" id="data">
+
+      
+<div class = "container">
+  <div class = "row mt-5">
+      <div class = "col-7">
+          <div class="jumbotron">
+              <h1>Wind Speed</h1>
+              <hr class = "my-4">
+              <p class="lead">
+              <img src="assets/Fig4.png" alt="Max Temp" style="width:100%;height:95%;padding:10px;display:block;">
+              </p>
+              <br>
+              <p class ="lead">It is apparent that wind speed (m/a) varies across the randomly sampled cities. 
+              <br>
+              <br>
+              There is no obvious pattern for latitudes and wind speed (m/a). 
+              We would not expect to see any relationship between wind speed (m/s) and latitide.
+              <br>
+              <br>
+              It was therefore predicted that no statistically significant relationship would be found between the latitude of cities and their recored wind speed.
+              <br>
+              <br>
+              For more please see the latitude vs weather regressions analysis for the hemipshere of interest.
+              <br>
+              <br>
+              </p>
+            </div>
+      </div>
+      <div class= "col-5">
+          <div class="jumbotron">
+              <h4>Visualisations</h4>
+              <h6>Plots</h6>
+              <hr class = "my-4">
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="max_temp.html"><img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:75%;display:block;" class="active-link"></a>
+                      <p> Max Temp</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="humid.html"><img src="assets/Fig2.png" alt="Humidity" style="width:100%;height:75%;display:block;"></a>
+                      <p>Humidity</p>
+                    </div>                       
+                    </div>
+                  <br>
+                  <br>
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="cloud.html"><img src="assets/Fig3.png" alt="Cloudiness" style="width:100%;height:75%;display:block;"></a>
+                      <p>Cloudiness</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="wind.html"><img src="assets/Fig4.png" alt="Wind Speed" style="width:100%;height:75%;display:block;"></a>
+                      <p>Wind Speed</p>
+                    </div> 
+                    </div>
+                    <br>
+                    <br>
+                    <h6>Regressions</h6>
+                    <hr class = "my-4">
+                    <div class = "row">
+                      <div class = "col-18">
+                        <a href="sth_reg.html"><img src="assets/s_temp.png" alt="Sth regressions" style="width:100%;height:90%;display:block;" class="active-link"></a>
+                      <p>Southern Latitude vs. Weather Regressions</p>
+                      </div>
+                      <br>
+                      <br>
+                    <div class = "col-18">
+                       <a href="nrth_reg.html"><img src="assets/n_temp.png" alt="Nrth regressions" style="width:100%;height:90%;display:block;"></a>
+                      <p>Northern Latitude vs Weather Regressions</p>
+                      </div>                       
+                   </div>
+               </div>                                                    
+          </div>
+      </div>
+  </div>
 </div>
+    </div>
+    <div class="tab-pane fade" id="dropdown1">
+    </div>
+    <div class="tab-pane fade" id="dropdown2">
+    </div>
+  </div>
+      </ul>
+    </div>
+  </nav>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
