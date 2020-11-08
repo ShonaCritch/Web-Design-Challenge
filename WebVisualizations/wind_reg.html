@@ -3,69 +3,139 @@
 
 <head>
     <meta charset = "UTF-8">
-    <title>Comparison</title>
+    <title>Wind Speed Regressions</title>
   <!-- Bring in bootstrap, bootswatch and other stylesheets -->
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu" crossorigin="anonymous">
   <meta charset = "UTF-8">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><h2>Latitude vs. </h2></a>
+    <ul class="nav nav-tabs">
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="max_temp.html">Latitude vs. Max Temp</a>
+      <a class="dropdown-item" href="humid.html">Latitude vs. Humidity</a>
+      <a class="dropdown-item" href="cloud.html">Latitude vs. Cloudiness</a>
+      <a class="dropdown-item" href="wind.html">Latitude vs. Wind Speed</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="compare.html">Compare Plots</a>
+    </div>
+  </li>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Regressions</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="hot_reg.html">Max Temp Regressions</a>
+    <a class="dropdown-item" href="humid_reg.html">Humidity Regressions</a>
+    <a class="dropdown-item" href="cloud_reg.html">Cloudiness Regressions</a>
+    <a class="dropdown-item" href="wind_reg.html">Wind Speed Regressions</a>
+  </div>
+</li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="data.html">Data</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade show active" id="data">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary no-pad">
-    <a class="navbar-brand offset-1 alert-secondary bigger-block" href="index.html" ><h2>Latitude</h2></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="nav nav-pills offset-7">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Plots</a>
-              <div class="dropdown-menu">
-              <a class="dropdown-item" href="max_temp.html">vs. Max Temp</a>
-              <a class="dropdown-item" href="humid.html">vs. Humidity</a>
-              <a class="dropdown-item" href="cloud.html">vs. Cloudiness</a>
-              <a class="dropdown-item" href="wind.html">vs. Wind Speed</a>
-              </div>
-          </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="compare.html">Comparison <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="data.html">Data</a>
-        </li>
+<div class = "container">
+  <div class = "row mt-5">
+      <div class = "col-7">
+          <div class="jumbotron">
+            <h1>Wind Speed Regressions</h1>
+              <hr class = "my-4">
+              <p class="lead">
+              <img src="assets/s_wind.png" alt="Sth-Wind Speed" style="width:100%;height:95%;padding:10px;display:block;">
+              <img src="assets/n_wind.png" alt="Nth-Wind Speed" style="width:100%;height:95%;padding:10px;display:block;">
+            </p>
+              <br>
+              <p class ="lead">The above Pearsons r linear regressions provides statistical analysis of the relationship between wind speed (m/s) and latitude for cities in each hemisphere.  
+                <br>
+                <br>
+                As expected, there is no relationship between wind speed (m/s) and latitude, with very weak correlations calculated (nothern = 0.18 and southern =0.26).  
+                <br>
+                <br>
+                In addition based on the r squared values, the regressions shows that between 3% (northern hemisphere) and 7% (southern hemisphere) of the wind speed measurements of a city can be predicted by  latitudinal postion, so latitude is not a good predicter of a city's wind speed.
+              </p>
+            </div>
+      </div>
+      <div class= "col-5">
+          <div class="jumbotron">
+              <h4>Visualisations</h4>
+              <hr class = "my-4">
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="max_temp.html"><img src="assets/Fig1.png" alt="Max Temp" style="width:100%;height:75%;display:block;" class="active-link"></a>
+                      <p> Max Temp</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="humid.html"><img src="assets/Fig2.png" alt="Humidity" style="width:100%;height:75%;display:block;"></a>
+                      <p>Humidity</p>
+                    </div>                       
+                    </div>
+                  <br>
+                  <br>
+                  <div class = "row">
+                      <div class = "col-6">
+                      <a href="cloud.html"><img src="assets/Fig3.png" alt="Cloudiness" style="width:100%;height:75%;display:block;"></a>
+                      <p>Cloudiness</p>
+                    </div>
+                      <div class = "col-6">
+                      <a href="wind.html"><img src="assets/Fig4.png" alt="Wind Speed" style="width:100%;height:75%;display:block;"></a>
+                      <p>Wind Speed</p>
+                    </div> 
+                    <br>
+                    <br>
+                  </div>
+                </div>
+                <div class="jumbotron">
+                  <h4>Regressions</h4>
+                    <hr class = "my-4">
+                    <div class = "col-18">
+                    <a href="hot_reg.html" target="_blank">
+                          <img src="assets/Hot.png" alt ="Hot" style="width:10%;height:15%;padding:0%;display:inline;"> 
+                        <p>Max Temp Regressions</p>  
+                      </a>
+                        </div>
+                        <div class = "col-18">
+                        <a href="humid_reg.html"><img src="assets/humid_drop.png" alt="Humid%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Humidity Regressions</p>
+                        </a>
+                        </div>  
+                        <div class = "col-18">
+                          <a href="cloud_reg.html"><img src="assets/cloudy.png" alt = "Cloud%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Cloudiness Regressions</p>
+                          </a>
+                        </div>
+                        <div class = "col-18">
+                          <a href="wind_reg.html"><img src="assets/windy.png" alt = "Wind Speed"style = "width:10%;height:15%;padding:0%;display:inline;">
+                          <p> Wind Speed Regressions</p>
+                          </a>
+                        </div>
+                        </div>                     
+                   </div>
+               </div>                                                    
+          </div>
+      </div>
+  </div>
+</div>
+    </div>
+    <div class="tab-pane fade" id="dropdown1">
+    </div>
+    <div class="tab-pane fade" id="dropdown2">
+    </div>
+  </div>
       </ul>
     </div>
   </nav>
-  
-  <div class="container">
-      <div class="row mt-5">
-          <div class="col-12">
-          <h1>Comparison: Latitude vs. X</h1>
-          <hr class = "my-4">
-          <p>Click any plot to get an in-depth analysis</p>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-6">
-          <a href="max_temp.html"><img src="assets/images/Fig1.png" alt="Max Temp" style="width:100%;height:95%;display:block;"></a>
-          </div>
-          <div class="col-6">
-          <a href="humid.html"><img src="assets/images/Fig2.png" alt="Humidity" style="width:100%;height:95%;display:block;"></a>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-6">
-          <a href="cloud.html"><img src="assets/images/Fig3.png" alt="Cloudy" style="width:100%;height:95%;display:block;"></a>
-          </div>
-          <div class="col-6">
-          <a href="wind.html"><img src="assets/images/Fig4.png" alt="Wind" style="width:100%;height:95%;display:block;"></a>
-          </div>
-    </div>
-  </div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
