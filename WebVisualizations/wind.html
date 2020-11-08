@@ -13,7 +13,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.html"><h2>Latitude vs Weather</h2></a>
+    <a class="navbar-brand" href="index.html"><h2>Latitude vs. </h2></a>
     <ul class="nav nav-tabs">
   </li>
   <li class="nav-item dropdown">
@@ -24,7 +24,7 @@
       <a class="dropdown-item" href="cloud.html">Latitude vs. Cloudiness</a>
       <a class="dropdown-item" href="wind.html">Latitude vs. Wind Speed</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="compare.html">Compare plots</a>
+      <a class="dropdown-item" href="compare.html">Compare Plots</a>
     </div>
   </li>
 </li>
@@ -61,19 +61,19 @@
               We would not expect to see any relationship between wind speed (m/s) and latitide.
               <br>
               <br>
-              It was therefore predicted that no statistically significant relationship would be found between the latitude of cities and their recored wind speed.
+              It was therefore predicted that no statistically significant relationship would be found between the latitude of cities and their wind speed.
               <br>
               <br>
-              For more please see the latitude vs weather regressions analysis for the hemipshere of interest.
-              <br>
-              <br>
+              To see the wind speed regression anlaysis for each hemipshere click the windy lines.
+              <a href="wind_reg.html" target="_blank">
+                <img src="assets/windy.png" alt ="Windy" style="width:10%;height:15%;padding:0%;display:inline-block;"> 
+                </a>
               </p>
             </div>
       </div>
       <div class= "col-5">
           <div class="jumbotron">
               <h4>Visualisations</h4>
-              <h6>Plots</h6>
               <hr class = "my-4">
                   <div class = "row">
                       <div class = "col-6">
@@ -96,23 +96,34 @@
                       <a href="wind.html"><img src="assets/Fig4.png" alt="Wind Speed" style="width:100%;height:75%;display:block;"></a>
                       <p>Wind Speed</p>
                     </div> 
-                    </div>
                     <br>
                     <br>
-                    <h6>Regressions</h6>
+                  </div>
+                </div>
+                <div class="jumbotron">
+                  <h4>Regressions</h4>
                     <hr class = "my-4">
-                    <div class = "row">
-                      <div class = "col-18">
-                        <a href="sth_reg.html"><img src="assets/s_temp.png" alt="Sth regressions" style="width:100%;height:90%;display:block;" class="active-link"></a>
-                      <p>Southern Latitude vs. Weather Regressions</p>
-                      </div>
-                      <br>
-                      <br>
                     <div class = "col-18">
-                       <a href="nrth_reg.html"><img src="assets/n_temp.png" alt="Nrth regressions" style="width:100%;height:90%;display:block;"></a>
-                      <p>Northern Latitude vs Weather Regressions</p>
-                      </div>                       
-                   </div>
+                    <a href="hot_reg.html" target="_blank">
+                          <img src="assets/Hot.png" alt ="Hot" style="width:10%;height:15%;padding:0%;display:inline;"> 
+                        <p>Max Temp Regressions</p>  
+                      </a>
+                        </div>
+                        <div class = "col-18">
+                        <a href="humid_reg.html"><img src="assets/humid_drop.png" alt="Humid%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Humidity Regressions</p>
+                        </a>
+                        </div>  
+                        <div class = "col-18">
+                          <a href="cloud_reg.html"><img src="assets/cloudy.png" alt = "Cloud%" style="width:10%;height:15%;padding:0%;display:inline;">
+                          <p>Cloudiness Regressions</p>
+                          </a>
+                        </div>
+                        <div class = "col-18">
+                          <a href="wind_reg.html"><img src="assets/windy.png" alt = "Wind Speed"style = "width:10%;height:15%;padding:0%;display:inline;">
+                          <p> Wind Speed Regressions</p>
+                          </a>
+                        </div>
                </div>                                                    
           </div>
       </div>
